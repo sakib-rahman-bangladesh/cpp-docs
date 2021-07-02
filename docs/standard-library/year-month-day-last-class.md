@@ -1,8 +1,8 @@
 ---
 description: "Learn more about: year_month_day_last class"
 title: "year_month_day_last class"
-ms.date: "06/25/2021"
-f1_keywords: ["chrono/std::chrono::year_month_day_last", "chrono/std::chrono::year::operator+=", "chrono/std::chrono::year::operator-=", "chrono/std::chrono::year::ok"]
+ms.date: "06/28/2021"
+f1_keywords: ["chrono/std::chrono::year_month_day_last", "chrono/std::chrono::year_month_day_last::operator+=", "chrono/std::chrono::year_month_day_last::operator-=", "chrono/std::chrono::year_month_day_last::sysdays", "chrono/std::chrono::year_month_day_last::localdays", "chrono/std::chrono::year_month_day_last::day", "chrono/std::chrono::year_month_day_last::year", "chrono/std::chrono::year_month_day_last::ok"]
 helpviewer_keywords: ["std::chrono [C++], year_month_day_last"]
 ---
 # `year_month_day_last` class  
@@ -66,6 +66,10 @@ The month value from the [`month_day_last`](month-day-last-class.md) is stored i
 
 *`y`*\
 The [`year`](year-class.md) value is stored in the constructed `year_month_day_last`.
+
+## Remarks
+
+For information about C++ 20 syntax used to specify dates, see [`operator/`](chrono-operators.md#op_/)
 
 ### Example: Create a `year_month_day_last`
 
@@ -153,11 +157,15 @@ The [`month`](month-class.md) value.
 
 Gets the `month_day_last` value stored in this `year_month_day_last`.
 
+```cpp
+constexpr month_day_last month_day_last() const noexcept;
+```
+
 ### Return value
 
 The [`month_day_last`](month-day-last-class.md) value stored in this `year_month_day_last`.
 
-## <a name="sys_days"></a> `month_day_last::operator sys_days`
+## <a name="sys_days"></a> `operator sys_days`
 
 Get the month, day, and year in this `year_month_day_last` as a count of days from the epoch for the system clock.
 
@@ -318,10 +326,11 @@ int main()
 
 ## See also
 
-[`year`](year-class.md)]\
+[`<chrono>`](chrono.md)\
+[`year`](year-class.md)\
 [`year_month`](year-month-class.md)\
 [`year_month_day`](year-month-day-class.md)\
 [`year_month_weekday`](year-month-weekday-class.md)\
 [`year_month_weekday_last`](year-month-weekday-last-class.md)\
-[`<chrono>`](chrono.md)\
+[`operator/`](chrono-operators.md#op_/)\
 [Header Files Reference](cpp-standard-library-header-files.md)

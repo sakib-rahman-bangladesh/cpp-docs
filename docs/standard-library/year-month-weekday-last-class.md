@@ -1,14 +1,14 @@
 ---
 description: "Learn more about: year_month_weekday_last class"
 title: "year_month_weekday_last class"
-ms.date: "06/25/2021"
+ms.date: "06/30/2021"
 f1_keywords: ["chrono/std::chrono::year_month_weekday_last", "chrono/std::chrono::year_month_weekday_last::month", "chrono/std::chrono::year_month_weekday_last::year", "chrono/std::chrono::year_month_weekday_last::weekday_last", "chrono/std::chrono::year_month_weekday_last::sys_days", "chrono/std::chrono::year_month_weekday_last::local_days", "chrono/std::chrono::year_month_weekday_last::ok", "chrono/std::chrono::year_month_weekday_last::operator+=", "chrono/std::chrono::year_month_weekday_last::operator-="]
 helpviewer_keywords: ["std::chrono [C++], year_month_weekday_last"]
 ---
 
 # `year_month_weekday_last` class  
 
- A specific year, month, and last weekday of the month.
+A specific year, month, and last weekday of the month.
 
 ## Syntax
 
@@ -73,6 +73,8 @@ The [`weekday_last`](weekdaylast-class.md) value.
 *`y`*\
 The [`year`](year-class.md) value.
 
+For information about C++ 20 syntax used to specify dates, see [`operator/`](chrono-operators.md#op_/)
+
 ### Example: Create a `year_month_weekday_last`
 
 ```cpp
@@ -118,7 +120,7 @@ constexpr bool ok() const noexcept;
 ### Return value
 
 `true` if the `year_month_weekday_last` value is valid. Otherwise, `false`.\
-A `year_month_weekday_last` is valid if both the `month` is valid and the `weekday_indexed` value is valid.
+A `year_month_weekday_last` is valid if the `month`, `weekday_indexed`, and `year` are all valid.
 
 ## <a name="op_+="></a> `operator+=`
 
@@ -190,7 +192,7 @@ The number of years to subtract.
 
 `*this` which reflects the result of the subtraction.
 
-### Example: `operator -=`
+### Example: `operator-=`
 
 ```cpp
 // compile using: /std:c++latest
@@ -244,7 +246,7 @@ If `ok() == true`, returns a `sys_days` that represents the last `weekday()` of 
 
 ## <a name="weekday"></a> `weekday`
 
- Get the [`weekday`](weekday-class.md) stored in the [`weekday_indexed`](weekdayindexed-class.md) stored in this `year_month_weekday_last`.
+ Get the [`weekday`](weekday-class.md).
 
 ```cpp
 constexpr weekday weekday() const noexcept;
@@ -280,10 +282,11 @@ The [`year`](year-class.md) value.
 
 ## See also
 
+[`<chrono>`](chrono.md)\
 [`year`](year-class.md)\
 [`year_month`](year-month-class.md)\
 [`year_month_day`](year-month-day-class.md)\
 [`year_month_day_last`](year-month-day-last-class.md)\
 [`year_month_weekday`](year-month-weekday-class.md)\
-[`<chrono>`](chrono.md)\
+[`operator/`](chrono-operators.md#op_/)\
 [Header Files Reference](cpp-standard-library-header-files.md)

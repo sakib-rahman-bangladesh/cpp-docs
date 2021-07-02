@@ -139,8 +139,6 @@ int main()
 }
 ```
 
-Output:
-
 ```output
 01 02
 02 02
@@ -182,8 +180,6 @@ int main()
     return 0;
 }
 ```
-
-Output:
 
 ```output
 05 04
@@ -260,7 +256,6 @@ int main()
 }
 ```
 
-Output:
 ```Output
 14
 ```
@@ -268,4 +263,8 @@ Output:
 ## See also
 
 [`<chrono>`](../standard-library/chrono.md)\
+[`month_day` class](month-day-class.md)\
+[`month_day_last` class](month-day-last-class.md)\
+[`year_month_day`](year-month-day-class.md)\
+[`year_month_day_last`](year-month-day-last-class.md)\
 [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)
